@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 import sequelize, { DataTypes } from '../config/database';
 const User = require('../models/user')(sequelize, DataTypes);
 
-const JWT_SECRET = 'your_jwt_secret_key'; // Replace with your actual secret key
+const JWT_SECRET = 'anand'; 
 
 /**
  * Check if a user exists by email
