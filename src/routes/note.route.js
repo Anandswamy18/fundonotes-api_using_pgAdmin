@@ -20,6 +20,7 @@ router.put('/:_id',userAuth, noteController.updateNote);
 
 router.delete('/:_id',userAuth, noteController.deleteNote);
 
-
+router.put('/archive/:_id', userAuth, noteController.archiveNote);
+router.put('/trash/:_id', userAuth, noteController.trashNote);
 
 export default router;
