@@ -13,7 +13,10 @@ router.post('', newUserValidator, userController.newUser);
 router.post('/login', loginValidator, userController.userLogin);
 
 
+router.post('/forgot-password', userController.forgotPassword);
 
+// Route for reset password
+router.post('/reset-password', userController.resetPassword);
 
 
 

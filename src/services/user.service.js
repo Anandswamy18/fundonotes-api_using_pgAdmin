@@ -10,7 +10,7 @@ const JWT_SECRET = 'anand';
  * @param {string} email
  * @returns {Promise<boolean>}
  */
-const doesUserExist = async (email) => {
+export const doesUserExist = async (email) => {
   const existingUser = await User.findOne({ where: { email: email } });
   return existingUser;
 };
@@ -71,4 +71,9 @@ const generateToken = (user) => {
   return token;
 
   
+};
+
+
+export const updateUserPassword = async (email, hashedPassword) => {
+  await User.update({ password: hashedPassword }, { where: { email: email } });
 };
